@@ -1,9 +1,28 @@
-🛠️ Processador de Itens CSV (Manipulação de I/O)
+📂 Processador de CSV (File I/O)
 
-Sistema de consola que automatiza a leitura de ficheiros .csv e a geração de sumários financeiros.
+Uma aplicação robusta de console que automatiza a leitura e processamento de dados de vendas.
 
-    Funcionalidade: O programa lê um ficheiro de origem com itens, preços e quantidades, calcula o total de cada produto e guarda o resultado numa subpasta /out num novo ficheiro summary.csv.
+### 🎯 O Desafio
+O sistema deve ler um arquivo `.csv` contendo itens vendidos (Nome, Preço Unitário, Quantidade), calcular o valor total de cada item e gerar automaticamente um relatório consolidado (`summary.csv`) em uma nova subpasta, garantindo a persistência dos dados.
 
-    Tecnologias: Uso de BufferedReader e BufferedWriter para alta performance em leitura/escrita, e gestão de diretórios com a classe File.
+### 🛠️ Competências Técnicas Aplicadas
+* **Java I/O:** Uso de `BufferedReader` e `BufferedWriter` para leitura e escrita de alta performance.
+* **Manipulação de Arquivos:** Criação dinâmica de diretórios e gerenciamento de caminhos com a classe `File`.
+* **Boas Práticas:** Implementação do **Try-with-resources** para garantir o fechamento seguro de streams e evitar vazamento de memória.
+* **POO:** Encapsulamento da lógica de negócio na entidade `Product` (cálculo de totais).
+* **Tratamento de Exceções:** Proteção contra erros comuns como "Arquivo não encontrado" ou "Formato inválido".
 
-    Destaque Técnico: Implementação de Try-with-resources para gestão segura de recursos e evitar fugas de memória.
+### 📊 Exemplo de Execução
+
+**Entrada (`input.csv`):**
+```csv
+TV LED,1290.99,1
+Video Game Chair,350.50,3
+Iphone X,900.00,2
+```
+**Saída Gerada (`out/summary.csv`):**
+```csv
+TV LED,1290.99
+Video Game Chair,1051.50
+Iphone X,1800.00
+```
