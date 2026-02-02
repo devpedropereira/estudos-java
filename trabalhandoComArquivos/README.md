@@ -1,4 +1,4 @@
-## 📂 Projeto em Destaque: Processador de CSV (File I/O)
+## 📂 Processador de CSV (File I/O)
 
 Uma aplicação robusta de console que automatiza a leitura e processamento de dados de vendas.
 
